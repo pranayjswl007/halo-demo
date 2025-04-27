@@ -9,6 +9,7 @@ on:
 jobs:
   call-workflow-passing-data:
     uses: pranayjswl007/ultimate-devops/.github/workflows/main-validate.yml@main
+    secrets: inherit # pass all secrets
     with:
       config-path: .github/labeler.yml
       environment-name: production
