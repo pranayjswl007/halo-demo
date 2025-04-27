@@ -11,5 +11,7 @@ jobs:
     uses: pranayjswl007/ultimate-devops/.github/workflows/main-validate.yml@main
     with:
       config-path: .github/labeler.yml
+    secrets:
       SF_AUTH_URL: ${{ secrets.SF_AUTH_URL }}
-      environment: production # Pass 'production' as an input
+    environment:
+      name: production
