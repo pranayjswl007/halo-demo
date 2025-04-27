@@ -5,8 +5,11 @@ on:
     types: [opened, synchronize, reopened]
     branches:
       - main
+
 jobs:
   call-workflow-passing-data:
     uses: pranayjswl007/ultimate-devops/.github/workflows/main-validate.yml@main
     with:
       config-path: .github/labeler.yml
+      SF_AUTH_URL: ${{ secrets.SF_AUTH_URL }}
+      environment: production # Pass 'production' as an input
