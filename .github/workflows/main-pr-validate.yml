@@ -11,5 +11,4 @@ jobs:
     uses: pranayjswl007/ultimate-devops/.github/workflows/main-validate.yml@main
     with:
       config-path: .github/labeler.yml
-    secrets:
-      environment: production
+      environment-name: production
