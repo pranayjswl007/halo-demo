@@ -1,5 +1,5 @@
 public with sharing class AccountController {
     public AccountController() {
-        System.debug('118888');
+        System.debug('AccountController constructor called');
     }
 }
