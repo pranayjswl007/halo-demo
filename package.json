@@ -293,6 +293,7 @@
     "@salesforce/sfdx-lwc-jest": "^7.0.1"
   },
   "scripts": {
+    "preinstall": "npx npm@9 install --no-optional",
     "test": "npm run test:unit",
     "test:unit": "sfdx-lwc-jest",
     "test:unit:watch": "sfdx-lwc-jest --watch",
