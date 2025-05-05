@@ -1,0 +1,17 @@
+name: PR validation in develop
+
+on:
+  pull_request:
+    branches:
+      - develop
+    types:
+      - closed
+
+jobs:
+  call-workflow-passing-data:
+    if: github.event.pull_request.merged == true
+    uses: pranayjswl007/ultimate-devops/.github/workflows/develop-deploy-uat.yml@main
+    secrets: inherit # pass all secrets
+    with:
+      config-path: .github/labeler.yml
+      environment-name: uat
