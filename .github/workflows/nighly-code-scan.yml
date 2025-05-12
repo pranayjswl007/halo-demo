@@ -1,0 +1,12 @@
+name: Nightly Code Scan
+
+on:
+  schedule:
+    - cron: "0 2 * * *" # Runs at 2:00 AM every day
+
+jobs:
+  call-workflow-passing-data:
+    uses: pranayjswl007/ultimate-devops/.github/workflows/code-scanner.yml@main
+    secrets: inherit # pass all secrets
+    with:
+      environment-name: production
