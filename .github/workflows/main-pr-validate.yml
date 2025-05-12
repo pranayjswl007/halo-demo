@@ -1,4 +1,4 @@
-name: Release Validation in Prod
+name: Release Validation in production/main
 
 on:
   pull_request:

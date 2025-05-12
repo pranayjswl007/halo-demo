@@ -1,4 +1,4 @@
-name: PR deployment in main/production
+name: Release Deployment in production/main
 
 on:
   pull_request:

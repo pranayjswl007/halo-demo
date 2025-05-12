@@ -1,13 +1,8 @@
 name: Nightly Code Scan
 
-# on:
-#   schedule:
-#     - cron: "0 2 * * *" # Runs at 2:00 AM every day
 on:
-  push:
-    branches:
-      - develop
-      - main
+  schedule:
+    - cron: "0 2 * * *" # Runs at 2:00 AM every day
 
 jobs:
   call-workflow-passing-data:
