@@ -11,5 +11,4 @@ jobs:
     uses: pranayjswl007/ultimate-devops/.github/workflows/develop-validate-uat.yml@main
     secrets: inherit # pass all secrets
     with:
-      config-path: .github/labeler.yml
       environment-name: uat
