@@ -8,7 +8,7 @@ on:
       - closed
 
 jobs:
-  call-templated-workflow:
+  main-pr-deployment:
     if: github.event.pull_request.merged == true
     uses: pranayjswl007/ultimate-devops/.github/workflows/deploy.yml@main
     secrets: inherit # pass all secrets
