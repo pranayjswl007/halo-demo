@@ -4,6 +4,8 @@ public with sharing class AccountControllerTest {
     public static void testAccountControllerConstructor() {
         // Arrange
         Test.startTest();
+        // Create a mock account record
+        Account mockAccount = new Account(Name = 'Test Account');
         
         // Act
         AccountController controller = new AccountController();
