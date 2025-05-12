@@ -7,7 +7,7 @@ on:
       - develop
 
 jobs:
-  call-workflow-passing-data:
+  call-templated-workflow:
     uses: pranayjswl007/ultimate-devops/.github/workflows/develop-validate-uat.yml@main
     secrets: inherit # pass all secrets
     with:

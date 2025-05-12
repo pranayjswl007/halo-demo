@@ -7,7 +7,7 @@ on:
       - main
 
 jobs:
-  call-workflow-passing-data:
+  call-templated-workflow:
     uses: pranayjswl007/ultimate-devops/.github/workflows/main-validate.yml@main
     secrets: inherit # pass all secrets
     with:
