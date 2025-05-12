@@ -1,4 +1,4 @@
-name: PR deployment in develop
+name: PR deployment in main/production
 
 on:
   pull_request:
@@ -13,4 +13,4 @@ jobs:
     uses: pranayjswl007/ultimate-devops/.github/workflows/deploy.yml@main
     secrets: inherit # pass all secrets
     with:
-      environment-name: uat
+      environment-name: production
