@@ -1,3 +1,4 @@
+[![Release Deployment in production/main](https://github.com/pranayjswl007/halo-demo/actions/workflows/main-pr-deploy.yml/badge.svg)](https://github.com/pranayjswl007/halo-demo/actions/workflows/main-pr-deploy.yml)
 # Salesforce DX Project: Next Steps
 
 Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
