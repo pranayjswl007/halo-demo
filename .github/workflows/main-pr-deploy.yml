@@ -1,14 +1,14 @@
-name: PR deployment in main/production
+name: Release Deployment in production/main
 
 on:
   pull_request:
     branches:
-      - develop
+      - main
     types:
       - closed
 
 jobs:
-  call-templated-workflow:
+  main-pr-deployment:
     if: github.event.pull_request.merged == true
     uses: pranayjswl007/ultimate-devops/.github/workflows/deploy.yml@main
     secrets: inherit # pass all secrets

@@ -1,4 +1,4 @@
-name: Release Validation in Prod
+name: Release Validation in production/main
 
 on:
   pull_request:
@@ -7,7 +7,7 @@ on:
       - main
 
 jobs:
-  call-workflow-passing-data:
+  main-pr-validation:
     uses: pranayjswl007/ultimate-devops/.github/workflows/validate.yml@main
     secrets: inherit # pass all secrets
     with:

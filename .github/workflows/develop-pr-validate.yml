@@ -7,7 +7,7 @@ on:
       - develop
 
 jobs:
-  call-workflow-passing-data:
+  develop-pr-validation:
     uses: pranayjswl007/ultimate-devops/.github/workflows/validate.yml@main
     secrets: inherit # pass all secrets
     with:
