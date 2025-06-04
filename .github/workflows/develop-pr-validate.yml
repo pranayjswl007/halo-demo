@@ -22,10 +22,8 @@ jobs:
   auto-promote:
     if: startsWith(github.head_ref, 'promotion-ga') == false
     uses: pranayjswl007/ultimate-devops/.github/workflows/auto-promote.yml@main
-    secrets:
-      pat-secret-name: GH_PAT
+    secrets: inherit
     with:
-      pat-secret-name: "GH_PAT"
       head-ref: ${{ github.head_ref }}
       base-ref: ${{ github.base_ref }}
       pr-number: ${{ github.event.pull_request.number }}
