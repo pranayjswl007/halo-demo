@@ -1,17 +1,32 @@
-name: PR validation in develop
+name: PR validation
 
 on:
   pull_request:
     types: [opened, synchronize, reopened]
     branches:
-      - develop
+      - develop # Only trigger when PR targets develop
 
 jobs:
+  # 🧪 Run validation if source branch starts with promotion-ga
   develop-pr-validation:
+    if: startsWith(github.head_ref, 'promotion-ga')
     uses: pranayjswl007/ultimate-devops/.github/workflows/validate.yml@main
-    secrets: inherit # pass all secrets
+    secrets: inherit
     with:
       environment-name: uat
       runQualityCheck: true
       runJestTests: true
       deployFromBranch: develop
+
+  # 🚀 Auto-promote if source branch does NOT start with promotion-ga
+  auto-promote:
+    if: startsWith(github.head_ref, 'promotion-ga') == false
+    uses: pranayjswl007/ultimate-devops/.github/workflows/auto-promote.yml@main
+    secrets:
+      pat-secret-name: GH_PAT
+    with:
+      pat-secret-name: "GH_PAT"
+      head-ref: ${{ github.head_ref }}
+      base-ref: ${{ github.base_ref }}
+      pr-number: ${{ github.event.pull_request.number }}
+      repository: ${{ github.repository }}
