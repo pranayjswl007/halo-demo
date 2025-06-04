@@ -14,3 +14,4 @@ jobs:
       environment-name: production
       runQualityCheck: false
       runJestTests: false
+      deployFromBranch: main
