@@ -1,0 +1,8 @@
+xpath_replacements:
+  - file: "labels/CustomLabels.labels-meta.xml"
+    xpath: "//ns:labels[ns:fullName='Company_Name']/ns:value"
+    value: "COMMAMAM"
+
+  - file: "labels/CustomLabels.labels-meta.xml"
+    xpath: "//ns:labels[ns:fullName='Company_Address']/ns:value"
+    value: "London"
