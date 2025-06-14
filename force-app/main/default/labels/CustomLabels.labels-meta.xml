@@ -5,13 +5,13 @@
         <language>en_US</language>
         <protected>true</protected>
         <shortDescription>Company Address</shortDescription>
-        <value>${COMPANY_NAME}</value>
+        <value>AAAA</value>
     </labels>
     <labels>
         <fullName>Company_Name</fullName>
         <language>en_US</language>
         <protected>true</protected>
         <shortDescription>Company Name</shortDescription>
-        <value>${COMPANY_ADDRESS}</value>
+        <value>dsaf</value>
     </labels>
 </CustomLabels>
